@@ -9,7 +9,7 @@ const corsOptions = {
   allowedHeaders: "Content-Type, Accept",
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
