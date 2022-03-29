@@ -15,7 +15,7 @@
     "express": "^4.17.3"
   },
   "devDependencies": {
-    "moran": "^0.0.11",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
   }
 }
