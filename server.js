@@ -6,6 +6,7 @@ const app = express();
 
 const corsOptions = {
   methods: "*",
+  allowedHeaders: "Content-Type, Accept",
 };
 
 app.use(cors(corsOptions));
