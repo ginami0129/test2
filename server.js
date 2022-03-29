@@ -4,6 +4,10 @@ import morgan from "morgan";
 
 const app = express();
 
+const corsOptions = {
+  methods: "*",
+};
+
 app.use(cors);
 app.use(morgan("dev"));
 
