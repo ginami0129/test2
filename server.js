@@ -8,7 +8,7 @@ const corsOptions = {
   methods: "*",
 };
 
-app.use(cors);
+app.use(cors(corsOptions));
 app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
