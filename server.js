@@ -4,17 +4,13 @@ import morgan from "morgan";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 
+import connectedDB from "./config/database.js";
+
 dotenv.config();
 
 const app = express();
-console.log("DB!");
-await mongoose.connect(process.env.MONGODB_URL);
-console.log("Connected!");
 
-const corsOptions = {
-  methods: "*",
-  allowedHeaders: "Content-Type, Accept",
-};
+connectedDB();
 
 app.use(cors());
 app.use(morgan("dev"));
