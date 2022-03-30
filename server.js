@@ -24,5 +24,29 @@ app.get("/", (req, res) => {
   });
 });
 
+app.post("/api/products/", (req, res) => {
+  res.json({
+    msg: "Create a Product",
+  });
+});
+
+app.get("/api/products/", (req, res) => {
+  res.json({
+    msg: "Show All Product!",
+  });
+});
+
+app.put("/api/products/", (req, res) => {
+  res.json({
+    msg: "Update a Product",
+  });
+});
+
+app.delete("/api/products/", (req, res) => {
+  res.json({
+    mag: "Delete a product",
+  });
+});
+
 const PORT = 8080;
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
