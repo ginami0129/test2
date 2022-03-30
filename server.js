@@ -5,7 +5,8 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 import connectedDB from "./config/database.js";
-import productRoute from "./routes/productRoutes.js";
+import productRoute from "./routes/productRoute.js";
+import orderRoute from "./routes/orderRoute.js";
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/products", productRoute);
+app.use("/api/orders", orderRoute);
 
 const PORT = 8080;
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
