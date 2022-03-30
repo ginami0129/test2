@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 
@@ -19,5 +22,5 @@ app.get("/", (req, res) => {
 });
 
 const PORT = 8080;
-
+console.log(process.env.TEST);
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
